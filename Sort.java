@@ -11,7 +11,7 @@ public class Sort {
 
     /*冒泡排序*/
     public static void bubble(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {  //n个元素的数组执行n-1次，执行n-1次之后剩下一个元素不需要排序
+        for (int i = 0; i < arr.length - 1; i++) {  //执行n-1次之后剩下一个元素不需要排序,只需要对前n-1个元素进行比较,即n个元素的数组总共有n-1个元素需要排序,从0下标执行到n-1下标结束
             for (int j = 0; j < arr.length - i - 1; j++) {  //每次循环结束,待排数组的最后一个元素为有序
                 if (arr[j] > arr[j + 1]) {
                     swapArr(arr, j, j + 1);  //前一个元素比后一个元素大就进行交换
